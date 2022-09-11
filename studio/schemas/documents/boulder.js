@@ -18,7 +18,7 @@ export default {
       },
     },
     {
-      name: 'cover-image',
+      name: 'coverImage',
       title: 'Cover Image',
       type: 'image',
       fields: [
@@ -41,7 +41,7 @@ export default {
   preview: {
     select: {
       title: 'name',
-      media: 'image',
+      media: 'coverImage',
     },
   },
 }

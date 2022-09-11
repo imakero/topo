@@ -2,6 +2,8 @@ import blockContent from './blockContent'
 import category from './category'
 import post from './post'
 import author from './author'
-import boulder from './boulder'
+import boulder from './documents/boulder'
+import problem from './documents/problem'
+import tag from './documents/tag'
 
-export const schemaTypes = [post, author, category, blockContent, boulder]
+export const schemaTypes = [blockContent, boulder, problem, tag]
