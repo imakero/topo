@@ -1,0 +1,5 @@
+export {default as boulder} from './boulder'
+export {default as problem} from './problem'
+export {default as tag} from './tag'
+export {default as area} from './area'
+export {default as page} from './page'
