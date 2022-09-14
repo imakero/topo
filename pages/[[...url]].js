@@ -10,8 +10,24 @@ export default Page
 
 export const getStaticProps = async ({ params: { url = "" } }) => {
   const pageQuery = groq`
-  *[_type == "page" && url == $url][0] {
-    ...
+  *[_type == "page" && url == "/"][0] {
+    ...,
+    content[] {
+      ...select(
+        _type == 'hero' => {...},
+        _type == 'featureList' => {
+          ...,
+          items[] {
+            ...,
+            content->{
+              ...,
+              'slug': slug.current,
+              coverImage
+            }
+          }
+        }
+      )
+    }
   }`
 
   const activeUrl =
@@ -43,9 +59,6 @@ export const getStaticPaths = async () => {
   `
   const data = await sanityClient.fetch(query)
 
-  // console.log(
-  //   data.map((page) => ({ params: { url: page.url.split("/").slice(1) } }))
-  // )
   return {
     paths: data.map((page) => ({
       params: { url: page.url.split("/").slice(1) },

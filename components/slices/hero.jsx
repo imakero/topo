@@ -17,7 +17,7 @@ const Hero = ({ coverImage, heading, subheading }) => {
         w="100%"
         p={8}
         color="brand.100"
-        backgroundColor="rgba(0,0,0,0.25)"
+        backgroundColor="blackAlpha.400"
       >
         <Heading as="h2" size="4xl">
           {heading}

@@ -19,7 +19,7 @@ export default {
       title: 'Page Contents',
       name: 'content',
       type: 'array',
-      of: [{type: 'hero'}],
+      of: [{type: 'hero'}, {type: 'featureList'}],
     },
   ],
 }
