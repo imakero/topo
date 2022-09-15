@@ -16,10 +16,37 @@ export default {
       type: 'string',
     },
     {
+      name: 'isTemplate',
+      title: 'Template Page',
+      description:
+        'Will this page be a template for several different pages, e.g. a template for the detail view of all boulders.',
+      type: 'boolean',
+    },
+    {
+      name: 'documentType',
+      title: 'Reference document type',
+      description: 'Select the document type that this page is a template for',
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Problem', value: 'problem'},
+          {title: 'Boulder', value: 'boulder'},
+          {title: 'Area', value: 'area'},
+        ],
+      },
+      hidden: ({document}) => !document.isTemplate,
+    },
+    {
       title: 'Page Contents',
       name: 'content',
       type: 'array',
-      of: [{type: 'hero'}, {type: 'featureList'}],
+      of: [
+        {type: 'hero'},
+        {type: 'featureList'},
+        {type: 'areaBanner'},
+        {type: 'cragDescription'},
+        {type: 'boulderHero'},
+      ],
     },
   ],
 }

@@ -1,3 +1,6 @@
 export {default as hero} from './hero'
 export {default as featureList} from './featureList'
 export {default as card} from './card'
+export {default as areaBanner} from './areaBanner'
+export {default as cragDescription} from './cragDescription'
+export {default as boulderHero} from './boulderHero'

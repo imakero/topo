@@ -1,4 +1,4 @@
-import { Box, Heading, SimpleGrid, VStack } from "@chakra-ui/react"
+import { Heading, SimpleGrid, VStack } from "@chakra-ui/react"
 import SliceLayout from "../SliceLayout"
 import Card from "./Card"
 
@@ -9,7 +9,7 @@ const FeatureList = ({ items, heading }) => {
         <Heading as="h2" size="xl" mb={8}>
           {heading}
         </Heading>
-        <SimpleGrid columns={3} spacing={8}>
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8}>
           {items.map((item) => {
             switch (item._type) {
               case "card":
