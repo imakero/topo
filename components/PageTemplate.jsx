@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react"
 import AreaBanner from "./slices/AreaBanner"
+import AreaContents from "./slices/AreaContents"
 import BoulderHero from "./slices/BoulderHero"
 import CragDescription from "./slices/CragDescription"
 import FeatureList from "./slices/FeatureList"
@@ -22,6 +23,8 @@ const PageTemplate = (props) => {
             return <CragDescription {...slice} {...dynamic} key={slice._key} />
           case "boulderHero":
             return <BoulderHero {...slice} {...dynamic} key={slice._key} />
+          case "areaContents":
+            return <AreaContents {...slice} {...dynamic} key={slice._key} />
           default:
             return <div key={i}>Could not find suitable slice to render</div>
         }

@@ -46,6 +46,7 @@ export default {
         {type: 'areaBanner'},
         {type: 'cragDescription'},
         {type: 'boulderHero'},
+        {type: 'areaContents'},
       ],
     },
   ],

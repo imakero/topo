@@ -1,4 +1,4 @@
-import { Container, Heading, Link, Text } from "@chakra-ui/react"
+import { Container, Heading, Link, Text, VStack } from "@chakra-ui/react"
 import { PortableText } from "@portabletext/react"
 import SliceLayout from "../SliceLayout"
 
@@ -21,7 +21,7 @@ const components = {
       </Text>
     ),
     h2: ({ children }) => (
-      <Heading color="gray.900" mb={4} pt={4}>
+      <Heading as="h2" size="md" color="gray.900" mb={4} pt={4}>
         {children}
       </Heading>
     ),
@@ -31,9 +31,14 @@ const components = {
 const CragDescription = ({ document: { description } }) => {
   return (
     <SliceLayout>
-      <Container>
-        <PortableText value={description} components={components} />
-      </Container>
+      <VStack>
+        <Heading as="h2" mb={4}>
+          Area description
+        </Heading>
+        <Container>
+          <PortableText value={description} components={components} />
+        </Container>
+      </VStack>
     </SliceLayout>
   )
 }

@@ -3,7 +3,7 @@ import { urlFor } from "../../lib/sanity"
 import InternalLink from "../InternalLink"
 
 const Card = ({ title, text, content: { coverImage, slug, _type } }) => {
-  const linkUrl = `${_type === "area" ? "/areas" : "/boulders"}/${slug}`
+  const linkUrl = `${_type === "area" ? "/areas" : "/boulders"}/${slug.current}`
 
   return (
     <VStack textAlign="center">

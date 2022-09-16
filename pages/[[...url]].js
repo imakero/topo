@@ -21,7 +21,6 @@ export const getStaticProps = async ({ params: { url } }) => {
             ...,
             content->{
               ...,
-              'slug': slug.current,
               coverImage
             }
           }
@@ -29,6 +28,7 @@ export const getStaticProps = async ({ params: { url } }) => {
         _type == 'areaBanner' => {...},
         _type == 'cragDescription' => {...},
         _type == 'boulderHero' => {...},
+        _type == 'areaContents' => {...},
       )
     }
   }`
@@ -121,17 +121,6 @@ export const getStaticPaths = async () => {
       }
     })
   )
-
-  // console.log(
-  //   JSON.stringify(
-  //     {
-  //       paths: paths.flat(1).map((path) => ({ params: { url: path } })),
-  //       fallback: false,
-  //     },
-  //     null,
-  //     2
-  //   )
-  // )
 
   return {
     paths: paths.flat(1).map((path) => ({ params: { url: path } })),
