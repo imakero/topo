@@ -7,7 +7,6 @@ import FeatureList from "./slices/FeatureList"
 import Hero from "./slices/hero"
 
 const PageTemplate = (props) => {
-  console.log(props)
   const { slices, dynamic } = props
   return (
     <Box>
