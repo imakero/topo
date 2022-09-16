@@ -4,7 +4,7 @@ import AreaContents from "./slices/AreaContents"
 import BoulderHero from "./slices/BoulderHero"
 import CragDescription from "./slices/CragDescription"
 import FeatureList from "./slices/FeatureList"
-import Hero from "./slices/hero"
+import Hero from "./slices/Hero"
 
 const PageTemplate = (props) => {
   const { slices, dynamic } = props
